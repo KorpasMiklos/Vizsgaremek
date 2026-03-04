@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="modal-backdrop">
+        <div class="modal">
+            <h2>Foglalás - Parkoló #{{parkolo.id}}</h2>
+
+            <!--TÍPUS VÁLASZTÁS-->
+            <div *ngIf="!tipus" class="tipus-valaszto">
+                <p>Válaszd ki a foglalás típusát:</p>
+
+                <button type="button" (click)="tipusValasztas('parkolas')">Parkolás</button>
+                <button type="button" (click)="tipusValasztas('berles')">Bérlés</button>
+            </div>
+
+            <form *ngIf="tipus === 'parkolas'" class="urlap">
+                <h3>Parkolás adatai</h3>
+
+                <label>Jármű id</label>
+                <select name="jarmu_id" [(ngModel)]="parkolas!.jarmu_id" required="">
+                    <option [ngValue]="null">Válassz járművet</option>
+                    <option *ngFor="let j of jarmuvek" [value]="j.id">
+                        {{j.rendszam}} ({{j.tipus}})
+                    </option>
+                </select>
+
+                <label>Parkolo id</label>
+                <input type="number" name="parkolo_id" [(ngModel)]="parkolas!.parkolo_id" required>
+
+                <label>Parkolás kezdete</label>
+                <input type="datetime-local" name="parkolas_kezdete" [(ngModel)]="parkolas!.parkolas_kezdete" (change)="szamolParkolasIdotartam()" required>
+
+                <label>Parkolás vége</label>
+                <input type="datetime-local" name="parkolas_vege" [(ngModel)]="parkolas!.parkolas_vege" (change)="szamolParkolasIdotartam()" required>
+
+                <label>Időtartam (perc)</label>
+                <input type="number" name="parkolas_idotartama" [(ngModel)]="parkolas!.parkolas_idotartama" readonly>
+
+                <div class="gombok">
+                    <button type="button" (click)="mentes()">Mentés</button>
+                    <button type="button" class="secondary" (click)="bezaras()">Mégse</button>
+                </div>
+            </form>
+
+            <!--BÉRLÉS ŰRLAP-->
+            <form *ngIf="tipus === 'berles'" class="urlap">
+                <h3>Bérlés adatai</h3>
+
+                <label>Parkolo id</label>
+                <input type="number" name="parkolo_id" [(ngModel)]="berles!.parkolo_id" required>
+
+                <label>Tulaj id</label>
+                <select name="tulaj_id" [(ngModel)]="berles!.tulaj_id" required>
+                    <option [ngValue]="null">Válassz bérlőt</option>
+                    <option *ngFor="let t of tulajok" [value]="t.id">
+                        {{t.nev}} ({{t.email_cim}})
+                    </option>
+                </select>
+                <input type="number" name="tulaj_id" [(ngModel)]="berles!.tulaj_id" required>
+
+                <label>Bérlés kezdete</label>
+                <input type="date" name="berles_kezdete" [(ngModel)]="berles!.berles_kezdete" (change)="szamolBerlesAr()" required>
+
+                <label>Bérlés vége</label>
+                <input type="date" name="berles_vege" [(ngModel)]="berles!.berles_vege" (change)="szamolBerlesAr()" required>
+
+                <label>Ár (Ft)</label>
+                <input type="number" name="ar" [(ngModel)]="berles!.ar" min="0" readonly>
+
+                <div class="gombok">
+                    <button type="button" (click)="mentes()">Mentés</button>
+                    <button type="button" class="secondary" (click)="bezaras()">Mégse</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

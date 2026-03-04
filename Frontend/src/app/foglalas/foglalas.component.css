@@ -1,0 +1,97 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  border-radius: 8px;
+}
+
+.modal h2 {
+  margin: 0 0 16px;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #222;
+}
+
+.tipus-valaszto {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tipus-valaszto p {
+  text-align: center;
+  font-weight: 600;
+}
+
+.urlap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.urlap label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.urlap input {
+  padding: 9px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.gombok {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:not(.secondary) {
+  background: #1976d2;
+  color: #fff;
+}
+
+button:not(.secondary):hover {
+  background: #155a9c;
+}
+
+button.secondary {
+  background: #e0e0e0;
+  color: #333;
+}
+
+button.secondary:hover {
+  background: #cfcfcf;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.urlap select {
+  padding: 9px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
