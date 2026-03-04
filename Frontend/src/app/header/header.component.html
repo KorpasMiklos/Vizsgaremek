@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="header.component.css">
+</head>
+<body>
+    <header class="header">
+    <div class="logo">
+        <span>{{logoText}}</span>
+    </div>
+
+    <div class="menu">
+        <button class="outline">Iskola parkoló</button>
+        <button class="adatbevitel-gomb" (click)="ujAdat()">Új adat</button>
+    </div>
+</header>
+
+<app-uj-adat *ngIf="modalNyitva" (close)="modalNyitva = false"></app-uj-adat>
+</body>
+</html>
