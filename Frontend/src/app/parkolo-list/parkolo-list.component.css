@@ -1,0 +1,120 @@
+body {
+    background-color: #f4f6f8;
+    padding: 20px;
+    color: #333;
+}
+
+/* Fő konténer */
+.lista-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.lista-container h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+}
+
+/* Parkoló grid */
+.parkolo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* Parkoló kártya */
+.parkolo-kartya {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 16px;
+    position: relative;
+    border: 3px solid transparent;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.parkolo-kartya:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* SZABAD – zöld pulzáló keret */
+.parkolo-kartya.szabad {
+    border-color: #2e7d32;
+    animation: pulse-green 1.8s infinite;
+}
+
+/* FOGLALT – sima piros keret, NINCS animáció */
+.parkolo-kartya.foglalt {
+    border-color: #c62828;
+    animation: none;
+}
+
+/* Zöld pulzálás animáció */
+@keyframes pulse-green {
+    0% {
+        box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(46, 125, 50, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(46, 125, 50, 0);
+    }
+}
+
+/* Kártya fejléc */
+.kartya-fejlec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.kartya-fejlec h3 {
+    font-size: 20px;
+}
+
+/* Státusz badge */
+.statusz {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.statusz.green {
+    background-color: #2e7d32;
+}
+
+.statusz.red {
+    background-color: #c62828;
+}
+
+/* Info */
+.info {
+    margin-top: 10px;
+    font-size: 14px;
+    font-style: italic;
+    color: #555;
+}
+
+/* Gomb */
+.foglalas-gomb {
+    margin-top: 12px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: #38d219;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.foglalas-gomb:hover {
+    background-color: #288b14;
+}
+
