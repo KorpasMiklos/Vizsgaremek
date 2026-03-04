@@ -1,0 +1,49 @@
+<div class="modal-backdrop">
+    <div class="modal">
+        <h2>Új adat felvitele</h2>
+
+        <!--TÍPUS VÁLASZTÁS-->
+        <div *ngIf="!tipus" class="tipus-valaszto">
+            <button type="button" (click)="tipus='jarmu'">Jármű felvitele</button>
+            <button type="button" (click)="tipus='tulaj'">Tulajdonos felvitele</button>
+            <button type="button" (click)="secondary" (click)="bezaras()">Mégse</button>
+        </div>
+
+        <!--JÁRMŰ ŰRLAP-->
+        <form *ngIf="tipus === 'jarmu'" class="urlap">
+            <label>Rendszám:</label>
+            <input type="text" name="rendszam" [(ngModel)]="jarmu!.rendszam" required>
+
+            <label>Szín:</label>
+            <input type="text" name="szin" [(ngModel)]="jarmu!.szin" required>
+
+            <label>Típus:</label>
+            <input type="text" name="tipus" [(ngModel)]="jarmu!.tipus" required>
+
+            <label>Tulajdonos:</label>
+            <input type="text" name="tulajdonos" [(ngModel)]="jarmu!.tulajdonos" required>
+
+            <div class="gombok">
+                <button type="button" (click)="mentes()">Mentés</button>
+                <button type="button" class="secondary" (click)="bezaras()">Mégse</button>
+            </div>
+        </form>
+
+        <!--TULAJDONOS ŰRLAP-->
+        <form *ngIf="tipus === 'tulaj'" class="urlap">
+            <label>Név:</label>
+            <input type="text" name="nev" [(ngModel)]="tulaj!.nev" required>
+
+            <label>Telefonszám:</label>
+            <input type="text" name="telefonszam" [(ngModel)]="tulaj!.telefonszam" required>
+
+            <label>Email cím:</label>
+            <input type="text" name="email_cim" [(ngModel)]="tulaj!.email_cim" required>
+
+            <div class="gombok">
+                <button type="button" (click)="mentes()">Mentés</button>
+                <button type="button" class="secondary" (click)="bezaras()">Mégse</button>
+            </div>
+        </form>
+    </div>
+</div>
