@@ -36,7 +36,7 @@ npm install express cors mysql2 body-parser
 ## Fejlesztői szerver indítása
 
 ```bash
-npm start
+ng serve
 ```
 
 Ezután az alkalmazás elérhető lesz a böngészőben:
@@ -44,4 +44,5 @@ Ezután az alkalmazás elérhető lesz a böngészőben:
 ```
 http://localhost:3000
 ```
+
 
