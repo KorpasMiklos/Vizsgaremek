@@ -27,4 +27,3 @@ A rendszer célja, hogy egyszerűen kezelhető módon nyilvántartsa a parkolóh
 - React Native
 - Expo
 
-## Projekt struktúra
