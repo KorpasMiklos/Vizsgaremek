@@ -1,59 +1,119 @@
-# Parkolorendszer
+# Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
+Ez a repository a projekt frontend alkalmazását tartalmazza.
 
-## Development server
+## 🚀 Technológiák
 
-To start a local development server, run:
+- JavaScript / TypeScript
+- React / Vue / Angular (válaszd ki ami igaz)
+- Vite / Webpack / Next.js
+- CSS / SCSS / Tailwind
 
-```bash
-ng serve
-```
+## 📦 Telepítés
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Előfeltételek:
 
-## Code scaffolding
+- Node.js (ajánlott: >=18)
+- npm vagy yarn
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Repository klónozása:
 
 ```bash
-ng generate --help
+git clone https://github.com/szervezet/projekt-nev.git
+cd frontend
 ```
 
-## Building
-
-To build the project run:
+Függőségek telepítése:
 
 ```bash
-ng build
+npm install
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+vagy
 
 ```bash
-ng test
+yarn install
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+## ▶️ Fejlesztői szerver indítása
 
 ```bash
-ng e2e
+npm run dev
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+vagy
 
-## Additional Resources
+```bash
+npm start
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Ezután az alkalmazás elérhető:
+
+```
+http://localhost:3000
+```
+
+## 🏗 Build készítése
+
+Production build:
+
+```bash
+npm run build
+```
+
+A buildelt fájlok a következő mappába kerülnek:
+
+```
+/dist
+```
+
+vagy
+
+```
+/build
+```
+
+## 🧪 Tesztelés
+
+Teszt futtatása:
+
+```bash
+npm run test
+```
+
+## 📁 Projekt struktúra
+
+```
+src/
+  components/    # UI komponensek
+  pages/         # oldalak / route-ok
+  services/      # API hívások
+  hooks/         # custom React hookok
+  utils/         # segédfüggvények
+  assets/        # képek, ikonok
+  styles/        # globális stílusok
+```
+
+## ⚙️ Környezeti változók
+
+Hozz létre egy `.env` fájlt:
+
+```
+VITE_API_URL=http://localhost:5000
+```
+
+vagy
+
+```
+REACT_APP_API_URL=http://localhost:5000
+```
+
+## 👨‍💻 Fejlesztési irányelvek
+
+- használj **ESLint** és **Prettier** formázást
+- komponensek legyenek **kis, újrafelhasználható egységek**
+- API hívások külön `services` mappában legyenek
+
+## 📄 Licenc
+
+MIT License
