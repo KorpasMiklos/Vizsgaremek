@@ -2,20 +2,18 @@
 
 Ez a repository a **SzakiPark projekt frontend alkalmazását** tartalmazza.
 
-## 🚀 Technológiák
+## Technológiák
 
 - JavaScript / TypeScript
 - Angular
-- Vite
-- CSS / SCSS / Tailwind
 
-## 📦 Telepítés
+## Telepítés
 
 ### Előfeltételek
 
 A projekt futtatásához telepítve kell legyen:
 
-- Node.js (ajánlott: >=18)
+- Node.js
 - npm
 
 ### Repository klónozása
@@ -38,7 +36,7 @@ cd frontend
 npm install
 ```
 
-## ▶️ Fejlesztői szerver indítása
+## Fejlesztői szerver indítása
 
 ```bash
 npm run dev
@@ -56,7 +54,7 @@ Ezután az alkalmazás elérhető lesz a böngészőben:
 http://localhost:3000
 ```
 
-## 🏗 Build készítése
+## Build készítése
 
 Production build készítése:
 
@@ -76,7 +74,7 @@ vagy
 /build
 ```
 
-## 🧪 Tesztelés
+## Tesztelés
 
 Tesztek futtatása:
 
@@ -84,7 +82,7 @@ Tesztek futtatása:
 npm run test
 ```
 
-## 📁 Projekt struktúra
+## Projekt struktúra
 
 ```
 src/
@@ -97,7 +95,7 @@ src/
   styles/        # globális stílusok
 ```
 
-## ⚙️ Környezeti változók
+## Környezeti változók
 
 Hozz létre egy `.env` fájlt a projekt gyökérmappájában.
 
@@ -113,12 +111,10 @@ vagy
 REACT_APP_API_URL=http://localhost:5000
 ```
 
-## 👨‍💻 Fejlesztési irányelvek
+## Fejlesztési irányelvek
 
 - használj ESLint és Prettier formázást
 - a komponensek legyenek kis, újrafelhasználható egységek
 - az API hívások a `services` mappában legyenek
 
-## 📄 Licenc
 
-MIT License
