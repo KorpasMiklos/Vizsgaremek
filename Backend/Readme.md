@@ -10,20 +10,15 @@ A projekt futtatásához telepítve kell legyen:
 - Node.js
 - npm
 - MySQL
-- Git
 
 ## Projekt letöltése
 
 Nyisd meg a Command Promptot (CMD), majd futtasd:
 
-```bash
-git clone https://github.com/felhasznalonev/repository-nev.git
-```
-
 Lépj be a projekt mappájába:
 
 ```bash
-cd repository-nev
+cd backend
 ```
 
 ## Függőségek telepítése
@@ -37,25 +32,19 @@ npm install
 ## Adatbázis beállítása
 
 1. Hozz létre egy MySQL adatbázist.
-2. Hozz létre egy `.env` fájlt a projekt gyökérmappájában.
+2. Hozz létre egy `index.js` fájlt a projekt gyökérmappájában.
 
-Példa `.env` fájl:
+Példa `index.js` fájl:
 
 ```
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=jelszo
-DB_NAME=szakipark
+host=localhost
+user=root
+password=jelszo
+database=parkolonyilvantarto
 PORT=3000
 ```
 
 ## Szerver indítása
-
-Fejlesztői módban:
-
-```bash
-npm run dev
-```
 
 Normál módban:
 
