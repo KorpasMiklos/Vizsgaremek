@@ -40,7 +40,7 @@ Példa `index.js` fájl:
 ```
 host=localhost
 user=root
-password=jelszo
+password=
 database=parkolonyilvantarto
 PORT=3000
 ```
