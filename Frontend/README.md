@@ -1,38 +1,41 @@
-# Frontend
+# SzakiPark Frontend
 
-Ez a repository a projekt frontend alkalmazását tartalmazza.
+Ez a repository a **SzakiPark projekt frontend alkalmazását** tartalmazza.
 
 ## 🚀 Technológiák
 
 - JavaScript / TypeScript
-- React / Vue / Angular (válaszd ki ami igaz)
-- Vite / Webpack / Next.js
+- Angular
+- Vite
 - CSS / SCSS / Tailwind
 
 ## 📦 Telepítés
 
-Előfeltételek:
+### Előfeltételek
+
+A projekt futtatásához telepítve kell legyen:
 
 - Node.js (ajánlott: >=18)
-- npm vagy yarn
+- npm
 
-Repository klónozása:
+### Repository klónozása
+
+Nyisd meg a Command Promptot (CMD) vagy a terminált, majd futtasd:
 
 ```bash
-git clone https://github.com/szervezet/projekt-nev.git
+git clone https://github.com/felhasznalonev/frontend-repository-nev.git
+```
+
+Lépj be a projekt mappájába:
+
+```bash
 cd frontend
 ```
 
-Függőségek telepítése:
+### Függőségek telepítése
 
 ```bash
 npm install
-```
-
-vagy
-
-```bash
-yarn install
 ```
 
 ## ▶️ Fejlesztői szerver indítása
@@ -47,7 +50,7 @@ vagy
 npm start
 ```
 
-Ezután az alkalmazás elérhető:
+Ezután az alkalmazás elérhető lesz a böngészőben:
 
 ```
 http://localhost:3000
@@ -55,13 +58,13 @@ http://localhost:3000
 
 ## 🏗 Build készítése
 
-Production build:
+Production build készítése:
 
 ```bash
 npm run build
 ```
 
-A buildelt fájlok a következő mappába kerülnek:
+A buildelt fájlok az alábbi mappába kerülnek:
 
 ```
 /dist
@@ -75,7 +78,7 @@ vagy
 
 ## 🧪 Tesztelés
 
-Teszt futtatása:
+Tesztek futtatása:
 
 ```bash
 npm run test
@@ -88,7 +91,7 @@ src/
   components/    # UI komponensek
   pages/         # oldalak / route-ok
   services/      # API hívások
-  hooks/         # custom React hookok
+  hooks/         # custom hookok
   utils/         # segédfüggvények
   assets/        # képek, ikonok
   styles/        # globális stílusok
@@ -96,7 +99,9 @@ src/
 
 ## ⚙️ Környezeti változók
 
-Hozz létre egy `.env` fájlt:
+Hozz létre egy `.env` fájlt a projekt gyökérmappájában.
+
+Példa:
 
 ```
 VITE_API_URL=http://localhost:5000
@@ -110,9 +115,9 @@ REACT_APP_API_URL=http://localhost:5000
 
 ## 👨‍💻 Fejlesztési irányelvek
 
-- használj **ESLint** és **Prettier** formázást
-- komponensek legyenek **kis, újrafelhasználható egységek**
-- API hívások külön `services` mappában legyenek
+- használj ESLint és Prettier formázást
+- a komponensek legyenek kis, újrafelhasználható egységek
+- az API hívások a `services` mappában legyenek
 
 ## 📄 Licenc
 
