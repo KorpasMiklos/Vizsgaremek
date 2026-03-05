@@ -26,7 +26,8 @@ cd backend
 A szükséges csomagok telepítése:
 
 ```bash
-npm install
+npm init -y
+npm install express cors mysql2 body-parser
 ```
 
 ## Adatbázis beállítása
