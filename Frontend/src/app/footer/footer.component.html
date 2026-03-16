@@ -1,0 +1,18 @@
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <strong>Parkolónyilvántartó rendszer</strong><br>
+      2026 © KSZC Fehérgyarmati Petőfi Sándor Technikum
+    </div>
+
+    <div class="footer-right">
+      <a href="#" (click)="openAdatvedelmi($event)">Adatkezelési tájékoztató</a>
+      <span class="footer-sep">|</span>
+      <span>v1.0</span>
+    </div>
+  </div>
+</footer>
+
+<app-adatvedelem
+  *ngIf="showAdatvedelmi" (closeModal)="closeAdatvedelmi()">
+</app-adatvedelem>
