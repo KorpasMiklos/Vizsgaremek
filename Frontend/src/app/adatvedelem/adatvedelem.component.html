@@ -1,0 +1,26 @@
+<div class="modal-backdrop" (click)="close()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+
+    <div class="modal-header">
+      <h2>Adatkezelési tájékoztató</h2>
+      <button class="close-btn" (click)="close()">✕</button>
+    </div>
+
+    <div class="modal-body">
+      <p>
+        Ez a parkolónyilvántartó rendszer a felhasználók rendszámát és
+        parkolási adatait kezeli.
+      </p>
+
+      <p>
+        Az adatkezelés célja a parkolóhelyek nyilvántartása és kezelése.
+      </p>
+
+      <p>
+        Az adatokat kizárólag a rendszer működéséhez használjuk fel,
+        harmadik félnek nem adjuk át.
+      </p>
+    </div>
+
+  </div>
+</div>
